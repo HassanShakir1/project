@@ -1,0 +1,101 @@
+@keyframes shadowRotation {
+    to{transform: translate(0%,10%) rotate(360deg);}
+}
+@keyframes shadowScale {
+    0%{transform:scaleY(1);}
+    30%{transform:scaleY(3);}
+    70%{transform:scaleY(3);}
+    100%{transform:scaleY(1);}
+}
+
+@keyframes orbitRotation {
+    to{
+        transform: translate(-50%,-50%) rotateY(+15deg) rotateZ(-360deg);
+    }
+}
+@keyframes planetRotation {
+    to{
+        transform: translate(-50%,-50%) rotateZ(360deg) rotateX(-45deg);
+    }
+}
+@keyframes sunRotation {
+    to{
+        transform: translate(-50%,-50%) rotateX(-45deg) rotateZ(-360deg);
+    }
+}
+@keyframes glow {
+    0%{
+        box-shadow: 0px 0px 100px rgb(255, 161, 53);
+    }
+    50%{
+        box-shadow: 0px 0px 200px rgb(255, 161, 53);
+    }
+    100%{
+        box-shadow: 0px 0px 100px rgb(255, 161, 53);
+    }
+}
+
+@keyframes moonOrbitRotation {
+    to{
+        transform: translate(-50%,-50%) rotateX(70deg) rotateZ(-360deg);
+    }
+}
+@keyframes moonRotation {
+    to{
+        transform: translate(-50%,-50%) rotateZ(360deg) rotateX(90deg);
+    }
+}
+
+/*--------------------------------------------------------------*/
+
+@keyframes stage1Welcome{
+    0%  {opacity: 0;}
+    10% {opacity: 0;}    
+    30% {opacity: 1;}
+    50% {transform:translate(0px,0px) scale(1);}
+    100%{transform:translate(0px,-50px) scale(0.7);}
+}
+@keyframes stage1fadein1{
+    0%  {opacity: 0;}
+    100%{opacity: 1; transform: translate(-50%,-20px);}
+}
+@keyframes stage1fadein2{
+    0%  {opacity: 0;}
+    100%{opacity: 1; transform: translate(-50%,40px)}
+}
+@keyframes playbutton{
+    0%  {opacity: 0;}
+    20% {opacity: 1;}
+    80% {opacity: 1;}
+    100%{opacity: 0; width:200px}
+}
+@keyframes spin{
+    to{
+        transform: rotate(540deg);
+    }
+}
+@keyframes ballgrow{
+    to{
+        transform: scale(2759%);
+    }
+}
+@keyframes loadingfadeIn{
+    0%  {opacity: 0;}
+    100% {opacity: 1; visibility: visible;}
+}
+@keyframes welcomefadeOut{
+    0%  {opacity: 1; visibility: visible;}
+    50%{transform: translateZ(0px); opacity: 0;visibility: hidden;}
+    100%{transform: translateZ(-100px); opacity: 0;visibility: hidden;}
+}
+@keyframes solarFadein{
+    0%  {opacity: 0;}
+    50%  {opacity: 0;}
+    100%  {opacity: 100;}
+}
+
+@keyframes bounce{
+    0%      {transform: translate(0px,-15px);}
+    50%     {transform: translate(0px,15px);}
+    100%    {transform: translate(0px,-15px);}
+}
