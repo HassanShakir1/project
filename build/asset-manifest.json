@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b11200a3.css",
+    "main.js": "/static/js/main.af5567b3.js",
+    "static/media/mesh4.png": "/static/media/mesh4.7cf63d70945749cf36f5.png",
+    "static/media/mesh2.png": "/static/media/mesh2.fcc5d5956dd6c23890c7.png",
+    "static/media/mesh9.png": "/static/media/mesh9.7821afb55e09e52714b0.png",
+    "static/media/mesh7.png": "/static/media/mesh7.12308376665312dfbd73.png",
+    "static/media/starsBackGround.webp": "/static/media/starsBackGround.4e8eff0fcf2bf041f5fe.webp",
+    "static/media/mesh1.png": "/static/media/mesh1.bc9804d9779fcaa880a9.png",
+    "static/media/mesh3.png": "/static/media/mesh3.ba738f23fed47d2efa15.png",
+    "static/media/mesh8.png": "/static/media/mesh8.480fbe178130ef111ba4.png",
+    "static/media/mesh6.png": "/static/media/mesh6.ae0a0aa45bea989db877.png",
+    "static/media/mesh5.png": "/static/media/mesh5.8c7f0801b7548c945277.png",
+    "static/media/mesh10.png": "/static/media/mesh10.697cac613929e748bf64.png",
+    "static/media/02.0 Mercury.webp": "/static/media/02.0 Mercury.100933514e684c944f58.webp",
+    "static/media/01.1 Sun.webp": "/static/media/01.1 Sun.294bd3197cca42fbdac8.webp",
+    "index.html": "/index.html",
+    "main.b11200a3.css.map": "/static/css/main.b11200a3.css.map",
+    "main.af5567b3.js.map": "/static/js/main.af5567b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b11200a3.css",
+    "static/js/main.af5567b3.js"
+  ]
+}
