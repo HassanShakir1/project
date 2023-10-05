@@ -54,9 +54,10 @@ function Quiz() {
           });
           setTimeout(()=>{
             setCurrentContentIndex(currentContentIndex + 1);
+        inputRef.current.value = "";
+
           }, 6000)
         
-        inputRef.current.value = "";
       } else if (currentContentIndex === 0 && checkAnswer !== "eclipse" && checkAnswer!=="") {
         toast.error('iNCORREJSBDVBDHUSADVBU', {
           position: "top-center",
