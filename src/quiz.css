@@ -100,78 +100,84 @@ html {
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-  border-radius: 5px;
-}
-
-h1 {
-  font-size: 18px;
-}
-
-#question {
-  font-size: 25px;
-  margin: 25px 0px;
-  color: #ffffff; /* or any other color */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-#answer {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* Semi-transparent white background for input */
-  color: #fff; /* Text color in input field */
-  visibility: visible;
-  position: static;
-}
-
-#submit {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#submit:hover {
-  background-color: #0056b3;
-}
-
-#hint {
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-#result {
-  background-color: #ff5733;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-#lifeline {
-  background-color: #fac832;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    border-radius: 5px;
+    color: #fff; /* Text color for content inside the container */
+  }
+  
+  h1 {
+    font-size: 20px; /* Slightly larger font size for the heading */
+    margin-bottom: 20px; /* Increase margin below the heading for spacing */
+  }
+  
+  #question {
+    font-size: 24px; /* Slightly smaller font size for the question */
+    margin: 20px 0; /* Adjusted margin for the question */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  #answer {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Increased margin for spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    visibility: visible;
+    position: static;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.7rem;
+    font-weight: 400;
+    /* Semi-transparent white background for input */
+  }
+  #note{
+    color: yellow;
+    margin-bottom: 1.9rem;
+    font-size: 1.5rem;
+  }
+  .life_line_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .life_line_container .life  i{
+    margin: 0rem .2rem;
+    margin-bottom: 1.9rem;
+    color: red;
+    font-size: 2rem;
+  }
+  #submit,
+  #hint,
+  #result,
+  #lifeline {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add margin at the bottom of buttons for spacing */
+  }
+  
+  #submit:hover,
+  #hint:hover {
+    background-color: #0056b3;
+  }
+  
+  #hint {
+    background-color: #4caf50;
+  }
+  
+  #result {
+    background-color: #ff5733;
+  }
+  
+  #lifeline {
+    background-color: #fac832;
+  }
+  

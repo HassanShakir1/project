@@ -1,29 +1,91 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./quiz.css";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Quiz() {
   const navigate = useNavigate();
   const [answer, setAnswer] = useState("");
   const [result, setResult] = useState("");
+  const [value, setValue] = useState(0);
+  const [currentContentIndex, setCurrentContentIndex] = useState(0);
+  const inputRef = useRef(null);
+  const icon1 = useRef(null);
+  const icon2 = useRef(null);
+  const icon3 = useRef(null);
 
-  // question
+
   let question = [
-    'An astronomical phenomenon occurs when one spatial object comes within the shadow of another object',
-    'How many types of lunar eclipse are there?',
-    'What type of solar eclipse is the rarest of all?',
-    'How eclipse occur?'
-]
+    "An astronomical phenomenon occurs when one spatial object comes within the shadow of another object",
+    "How many types of lunar eclipse are there?",
+    "What type of solar eclipse is the rarest of all?",
+    "How eclipse occur?",
+  ];
 
-  function collectAnswer(event) {
+  function change(event) {
     event.preventDefault();
-    const chechAnswer = answer.toLowerCase();
-    if (chechAnswer == "talha") {
-      setResult("answer is corret");
+    if(answer === ""){
+      toast.error('Answer is required', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+    }
+    if (currentContentIndex === 3) {
+      setCurrentContentIndex(0);
     } else {
-      setResult("answer is wrong");
+      const checkAnswer = answer.toLowerCase();
+      if (currentContentIndex === 0 && checkAnswer === "eclipse") {
+        toast.success('Correct Answer', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+          setTimeout(()=>{
+            setCurrentContentIndex(currentContentIndex + 1);
+          }, 6000)
+        
+        inputRef.current.value = "";
+      } else if (currentContentIndex === 0 && checkAnswer !== "eclipse" && checkAnswer!=="") {
+        toast.error('iNCORREJSBDVBDHUSADVBU', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+        inputRef.current.style.border = ".1rem solid red";
+  
+        if (value === 0) {
+          icon1.current.style.color = "white";
+          setValue(1);
+        } else if (value === 1) {
+          icon2.current.style.color = "white";
+          setValue(2);
+        }
+        else if(value === 2){
+          icon3.current.style.color = "white";
+          
+          // setValue(2);
+        }
+      }
     }
   }
+  
 
   function view() {
     navigate("/");
@@ -45,56 +107,54 @@ function Quiz() {
         </div>
         <h1 className="i">i</h1>
       </div>
-      {/* <div className="q">
-        <div className="s">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum
-            quas libero quam aliquam adipisci earum corrupti quod ab delectus
-            nulla iure facere excepturi quasi, aperiam voluptatibus laudantium
-            sint ex. Quam qui, architecto assumenda quos quo enim iure similique
-            sint maiores minus. Rem ab eligendi minus incidunt nihil fugit vitae
-            voluptatibus doloribus expedita aperiam, debitis maiores facere
-            doloremque explicabo alias!
-          </p>
-          <form>
-          <label className="label">Enter Your Answer</label>
-            <div className="in">
+      <div class="container">
+        <div className="sub-container">
+          <div class="container">
+            <h1>Answer the Question</h1>
+            <h3 id="question">{question[currentContentIndex]}</h3>
+            <div className="life_line_container">
+              <p id="note">Provide a one-word answer:</p>
+              <div className="life">
+                <i class="fas fa-heart" ref={icon1}></i>
+                <i class="fas fa-heart" ref={icon2}></i>
+                <i class="fas fa-heart" ref={icon3}></i>
+              </div>
+            </div>
+
             <input
               type="text"
-              style={{ visibility: "visible" }}
-              className="answer"
+              id="answer"
+              placeholder="Enter your answer"
               onChange={(e) => {
                 setAnswer(e.target.value);
               }}
+              onFocus={(e) => {
+                e.target.setAttribute("autocomplete", "off");
+              }}
+              ref={inputRef}
+              autocomplete="no-suggestions"
             />
-            <input
-              type="submit"
-              style={{ visibility: "visible" }}
-              className="submit"
-              onClick={collectAnswer}
-            />
-          
-            </div>
-            
-            <br />
-            <br />
-            <p>{result}</p>
-          </form>
+            <button id="submit" onClick={change}>
+              Submit
+            </button>
+            <button id="hint">Hint</button>
+            <button id="result">Show Result</button>
+            <button id="lifeline">Use Lifeline</button>
+          </div>
         </div>
-      </div> */}
-      <div class="container">
-        <div className="sub-container">
-        <div class="container">
-        <h1>Answer the Question</h1>
-        <h3 id="question">{question[1]}</h3>
-        <input type="text" id="answer" placeholder="Enter your answer"/>
-        <button id="submit">Submit</button>
-        <button id="hint">Hint</button>
-        <button id="result">Show Result</button>
-        <button id="lifeline">Use Lifeline</button>
-    </div>
-        </div>
-    </div >
+      </div>      
+      <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
     </div>
   );
 }
