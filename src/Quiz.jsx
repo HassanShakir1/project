@@ -6,6 +6,15 @@ function Quiz() {
   const navigate = useNavigate();
   const [answer, setAnswer] = useState("");
   const [result, setResult] = useState("");
+
+  // question
+  let question = [
+    'An astronomical phenomenon occurs when one spatial object comes within the shadow of another object',
+    'How many types of lunar eclipse are there?',
+    'What type of solar eclipse is the rarest of all?',
+    'How eclipse occur?'
+]
+
   function collectAnswer(event) {
     event.preventDefault();
     const chechAnswer = answer.toLowerCase();
@@ -77,7 +86,7 @@ function Quiz() {
         <div className="sub-container">
         <div class="container">
         <h1>Answer the Question</h1>
-        <p id="question">What is the capital of France?</p>
+        <h3 id="question">{question[1]}</h3>
         <input type="text" id="answer" placeholder="Enter your answer"/>
         <button id="submit">Submit</button>
         <button id="hint">Hint</button>
@@ -85,7 +94,7 @@ function Quiz() {
         <button id="lifeline">Use Lifeline</button>
     </div>
         </div>
-    </div>
+    </div >
     </div>
   );
 }

@@ -1,180 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap");
 
-html{
-    font-size: 65%;
+html {
+  font-size: 65%;
 }
-.quiz{
-    font-family: 'Josefin slab', serif;
-    
+.quiz {
+  font-family: "Josefin slab", serif;
 }
-.content{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 2rem 1rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-.content .i{
-    /* color: lightblue; */
-    background-color: purple;
-    border-radius: 50%;
-     width: 30px;
-    height: 30px; 
-    padding: .3rem;
-    text-align: center;
-    font-size: 1.7rem;
+.content .i {
+  /* color: lightblue; */
+  background-color: purple;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 1.7rem;
 }
-.home{
-    background-color: purple;
-    border-radius: 50%;
-    padding: .5rem;
-    
+.home {
+  background-color: purple;
+  border-radius: 50%;
+  padding: 0.5rem;
 }
-.d{
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
+.d {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
 }
-.d i{
-    color: purple;
-    z-index: 1000;
-    font-size: 2.3rem;
+.d i {
+  color: purple;
+  z-index: 1000;
+  font-size: 2.3rem;
 }
-.d h3{
-    border: .1rem solid goldenrod;
-    width: 7rem;
-    border-radius: 25px;
-    border-left: none;
-    margin: 0rem -1.2rem;
-    text-align: center;
-    z-index: -1;
-    font-size: 1.7rem;
+.d h3 {
+  border: 0.1rem solid goldenrod;
+  width: 7rem;
+  border-radius: 25px;
+  border-left: none;
+  margin: 0rem -1.2rem;
+  text-align: center;
+  z-index: -1;
+  font-size: 1.7rem;
 }
-.q{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
+.q {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
 }
-.s{
-    width: 1000px;
-    margin: 0rem 2rem;
-    font-size: 2rem;
+.s {
+  width: 1000px;
+  margin: 0rem 2rem;
+  font-size: 2rem;
 }
-.q .s p{
-    text-transform: capitalize;
-    border: .2rem solid goldenrod;
-    padding: .4rem .5rem;
-    width: 100%;
-    text-align: justify;
-    margin: 4rem 0rem;
-    /* height: 50px; */
+.q .s p {
+  text-transform: capitalize;
+  border: 0.2rem solid goldenrod;
+  padding: 0.4rem 0.5rem;
+  width: 100%;
+  text-align: justify;
+  margin: 4rem 0rem;
+  /* height: 50px; */
 }
 
-.q .s .answer{
-    background: transparent;
-    border: .1rem solid goldenrod;
-    padding: .4rem .5rem;
-    color: #fff;
-    width: 70%;
-    position: static;
-    margin: 1.3rem 0rem;
-    font-size: 1.7rem;
+.q .s .answer {
+  background: transparent;
+  border: 0.1rem solid goldenrod;
+  padding: 0.4rem 0.5rem;
+  color: #fff;
+  width: 70%;
+  position: static;
+  margin: 1.3rem 0rem;
+  font-size: 1.7rem;
 }
-.in{
-    display: flex;
+.in {
+  display: flex;
 }
-.q .s .submit{
-    border: .1rem solid #fff;
-    background-color: transparent;
-    color: #fff;
-    padding: .2rem 3rem;
-    cursor: pointer;
-    position: static;
-    margin: 1.3rem 0rem;
-    font-size: 1.7rem;
-    transition: .3s ease;
+.q .s .submit {
+  border: 0.1rem solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.2rem 3rem;
+  cursor: pointer;
+  position: static;
+  margin: 1.3rem 0rem;
+  font-size: 1.7rem;
+  transition: 0.3s ease;
 }
-.q .s .submit:hover{
-    border: .1rem solid gold;
+.q .s .submit:hover {
+  border: 0.1rem solid gold;
 }
-
 
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-    border-radius: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  border-radius: 5px;
 }
 
 h1 {
-    font-size: 24px;
+  font-size: 18px;
 }
 
 #question {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 25px;
+  margin: 25px 0px;
+  color: #ffffff; /* or any other color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 #answer {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background for input */
-    color: #fff; /* Text color in input field */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent white background for input */
+  color: #fff; /* Text color in input field */
+  visibility: visible;
+  position: static;
 }
 
 #submit {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #submit:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 #hint {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-right: 10px;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 #result {
-    background-color: #FF5733;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-right: 10px;
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 #lifeline {
-    background-color: #FAC832;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #fac832;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-
-
-
-
-
-
-
