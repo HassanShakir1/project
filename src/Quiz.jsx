@@ -157,8 +157,8 @@ function Quiz() {
               Submit
             </button>
             <button id="hint">Hint</button>
-            <button id="result">Show Result</button>
-            <button id="lifeline">Use Lifeline</button>
+            {/* <button id="result">Show Result</button>
+            <button id="lifeline">Use Lifeline</button> */}
           </div>
         </div>
       </div>

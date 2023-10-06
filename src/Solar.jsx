@@ -4,6 +4,16 @@ import './animation.css'
 import './Solarsystem.css'
 import sun from './assets/01.1 Sun.webp';
 import mercury from './assets/02.0 Mercury.webp'
+import venus from './assets/03.0 Venus.webp'
+import earth from './assets/04.0 Earth.webp'
+import moon1 from './assets/05.2 Moon.webp'
+import mars from './assets/06.0 Mars.webp'
+import jupiter from './assets/07.0 Jupiter.webp'
+import saturn from './assets/08.0 Saturn.webp'
+import saturnR from './assets/08.1 Saturn_Ring.webp'
+import titan from './assets/08.5 Titan.webp'
+import uranus from './assets/09.0 Uranus.webp'
+import neptune from './assets/10.0 Neptun.webp'
 import { useNavigate } from 'react-router-dom';
 // import Solar from './Solar';
 
@@ -72,7 +82,7 @@ function Solar() {
                         </div>
                         <div class="planet venus">
                             <figure>
-                                <img src="assets/03.0 Venus.webp" alt="Venus"/>
+                                <img src={venus} alt="Venus"/>
                                 <div class="shadow">
                                     <div><div></div></div>
                                 </div>
@@ -80,18 +90,18 @@ function Solar() {
                         </div>
                         <div class="planet earth">
                             <figure>
-                                <img src="assets/04.0 Earth.webp" alt="Earth"/>
+                                <img src={earth} alt="Earth"/>
                                 <div class="shadow">
                                     <div><div></div></div>
                                 </div>
                                 <figure class="moon">
-                                    <img src="assets/05.2 Moon.webp" alt="Moon"/>
+                                    <img src={moon1} alt="Moon"/>
                                 </figure>
                             </figure>
                         </div>
                         <div class="planet mars">
                             <figure>
-                                <img src="assets/06.0 Mars.webp" alt="mars"/>
+                                <img src={mars} alt="mars"/>
                                 <div class="shadow">
                                     <div><div></div></div>
                                 </div>
@@ -101,7 +111,7 @@ function Solar() {
                         </div>
                         <div class="planet jupiter">
                             <figure>
-                                <img src="assets/07.0 Jupiter.webp" alt="jupiter"/>
+                                <img src={jupiter} alt="jupiter"/>
                                 <div class="shadow">
                                     <div><div></div></div>
                                 </div>
@@ -109,16 +119,16 @@ function Solar() {
                         </div>
                         <div class="planet saturn">
                             <figure>
-                                <img src="assets/08.0 Saturn.webp" alt="saturn"/>
+                                <img src={saturn} alt="saturn"/>
                                 <div class="shadow">
                                     <div><div></div></div>
                                 </div>
-                                <img src="assets/08.1 Saturn_Ring.webp" alt="saturn ring"/>
+                                <img src={saturnR} alt="saturn ring"/>
                             </figure>
                         </div>
                         <div class="planet uranus">
                             <figure>
-                                <img src="assets/09.0 Uranus.webp" alt="Uranus"/>
+                                <img src={uranus} alt="Uranus"/>
                                 <div class="shadow">
                                     <div><div></div></div>
                                 </div>
@@ -127,7 +137,7 @@ function Solar() {
                         </div>
                         <div class="planet neptun">
                             <figure>
-                                <img src="assets/10.0 Neptun.webp" alt="neptun"/>
+                                <img src={neptune} alt="neptun"/>
                                 <div className="shadow">
                                     <div><div></div></div>
                                 </div>
